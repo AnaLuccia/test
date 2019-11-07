@@ -1,0 +1,6 @@
+Options +FollowSymlinks
+RewriteEngine on 
+
+RewriteCond %{HTTP_HOST} ^analuccia.com [NC] 
+RewriteRule ^(.*)$ http://www.analuccia.com/$1 [L,R=301]
+

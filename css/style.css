@@ -1,0 +1,245 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+
+
+@font-face {
+    font-family: 'BlanchCondensed';
+    src: url('../fonts/blanch-condensed.eot');
+    src: url('../fonts/blanch-condensed.eot?#iefix') format('eot'),
+         url('../fonts/blanch-condensed.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+
+}
+
+body {
+	background: url(../images/bg.jpg) center top;
+	background-attachment: fixed;
+	font: normal 17px/28px 'Economica', sans-serif;
+	color: #fff;
+}
+
+#wrap {
+	width: 1000px;
+	margin: 0 auto;
+	padding: 0 7px; 
+	position: relative;
+}
+
+#wrap a:first-child img {
+	float: left;
+    margin: 0 0 0 -100px;
+	position: absolute; 
+	z-index: 1;
+}
+
+#nav {
+	font: 600 31px/30px 'BlanchCondensed',sans-serif;
+	float: right;
+	margin-top: 38px;
+}
+
+#nav ul li {
+	list-style-type: none;
+	display: inline-block;
+	float: left;
+	padding: 0 15px;
+}
+
+#nav ul li a {
+	text-decoration: none;
+	color: #fff;
+}
+
+#nav ul li a:hover {
+	color: #fab84c;
+}
+
+.content {
+	clear: right;
+	margin-top: -20px;
+}
+
+.about > .content, .portfolio > .content, .contact > .content, .thanks > .content {
+	margin-top: 150px;
+}
+
+.portfolio > .content {
+	margin-bottom: 55px;
+}
+
+#slider-container {
+	background: url(../images/slider-bg.png) top center no-repeat;
+	width: 782px;
+	height: 485px;
+	padding: 44px 0 0 232px;
+	margin: 0 -7px 0 -7px;
+	clear: right;
+	position: relative;
+	z-index: 4000;
+}
+
+.content:after {
+	content:'.';
+	clear: both;
+	display: block;
+	visibility: hidden;
+	height: 0px;
+}
+
+h1, h2 {
+	font: 600 50px/22px 'BlanchCondensed',sans-serif;
+	color: #fff;
+	margin-bottom: 25px;
+}
+
+p {
+	width: 830px;
+	margin: 10px 0;
+}
+
+#social {
+	clear: both;
+	float: right;
+	width: 150px;
+	margin-top: 0px;
+	position: relative;
+	z-index: 20000;
+}
+
+#social li {
+	background: url(../images/linkedin.png) center top no-repeat;
+	list-style-type: none;
+	display: block;
+	width: 45px;
+	height: 45px;
+	float: left;
+	text-indent:-9999px;
+	margin-left: 20px;
+}
+
+#social li:first-child {
+	background: url(../images/facebook.png) left top no-repeat;
+}
+
+#social li:hover {
+	background-position: left bottom;
+}
+
+#social li a {
+	display: block;
+	width: 45px;
+	height: 45px;
+}
+
+/** FORM **/
+
+form {
+	width: 600px;
+	float: left;
+}
+
+form p {
+	clear: both;
+}
+
+label {
+	text-align: left;
+}
+
+p label.align {
+	width: 250px;
+	float: left;
+	margin: 0 5px;
+}
+
+p input.align {
+	width: 250px;
+	float: left;
+	height: 25px;
+	margin: 0 5px 5px 5px;
+	border: 1px solid #fff;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	border-radius: 5px;
+}
+
+textarea {
+	width: 510px;
+	height: 200px;
+	clear: both;
+	margin: 0 5px;
+	border: 1px solid #fff;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	border-radius: 5px;
+}
+
+#submit {
+	background: none;
+	font: 600 31px/30px 'BlanchCondensed',sans-serif;
+	padding-bottom: 3px;
+	float: left;
+	color: #fab84c;
+	width: 90px;
+}
+
+/** ISOTOPE **/
+
+#container {
+	clear: right;
+	width: 100%;
+	margin: 0 0 0 0;
+	positon: relative;
+	z-index: 4;
+}
+
+.isotope-item {
+  z-index: 2000;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.isotope,
+.isotope .isotope-item {
+  /* change duration value to whatever you like */
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+          transition-property:         transform, opacity;
+}
